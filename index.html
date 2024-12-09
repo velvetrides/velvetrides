@@ -4,53 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velvet Rides Luxury Car Rental</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Velvet Rides Header Styles */
         body {
             margin: 0;
             font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f9f9f9;
         }
         header {
             background-color: black;
-            padding: 45px 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 50px 20px;
             text-align: center;
         }
         header img {
-            height: 100px;
-            transition: transform 0.3s ease; /* Smooth zoom transition */
+            height: 120px;
+            transition: transform 0.3s ease;
         }
         header img:hover, 
         header img:active {
-            transform: scale(2); /* Zooms the logo by 200% */
+            transform: scale(1.5);
         }
         header h1 {
-            font-family: 'Lobster', Arial, sans-serif;
-            color: linear-gradient(to right, #ff416c, #ff4b2b);
-            background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-top: 20px;
             font-size: 36px;
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+            margin-top: 20px;
+            color: #B5485D;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
         }
-        main {
+        /* Rest of the Page Styles */
+        .search-bar {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 60%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+        .search-bar button {
+            padding: 15px;
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #cc7a00;
+        }
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            justify-items: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .brand-card {
+            width: 100px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .brand-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .brand-card img:hover {
+            transform: scale(1.2);
+        }
+        .brand-card p {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
             padding: 20px;
             text-align: center;
+        }
+        .footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .search-bar input {
+                width: 80%;
+            }
+            .brand-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .brand-card {
+                width: 120px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Velvet Rides Header -->
     <header>
         <img src="https://github.com/velvetrides/velvetrides/blob/main/company%20logo.png?raw=true" alt="Velvet Rides Logo">
-        <h1>Velvet Rides Luxury Car Rental</h1>
+        <h1>VELVET RIDES LUXURY CAR RENTAL</h1>
     </header>
-    <main>
-        <h2>Welcome to Velvet Rides</h2>
-        <p>Your premier choice for luxury car rentals.</p>
-    </main>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Search for a car model...">
+        <button onclick="searchCar()">Search</button>
+    </div>
+
+    <!-- Car Brand Section -->
+    <div class="brand-section">
+        <h2 style="text-align: center;">Select Your Car Brand</h2>
+        <div class="brand-grid">
+            <!-- Mercedes-Benz -->
+            <div class="brand-card" onclick="location.href='mercedes-benz.html'">
+                <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/MERCEDES-BENZ%20LOGO.png?raw=true" alt="Mercedes-Benz">
+                <p>Mercedes-Benz</p>
+            </div>
+            <!-- Lamborghini -->
+            <div class="brand-card" onclick="location.href='lamborghini.html'">
+                <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/LAMBORGHINI%20LOGO.png?raw=true" alt="Lamborghini">
+                <p>Lamborghini</p>
+            </div>
+            <!-- Land Rover -->
+            <div class="brand-card" onclick="location.href='land-rover.html'">
+                <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/LAND%20ROVER%20LOGO.png?raw=true" alt="Land Rover">
+                <p>Land Rover</p>
+            </div>
+            <!-- Rolls Royce -->
+            <div class="brand-card" onclick="location.href='rolls-royce.html'">
+                <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/ROLLS%20ROYCE%20LOGO.png?raw=true" alt="Rolls Royce">
+                <p>Rolls Royce</p>
+            </div>
+            <!-- Porsche -->
+        <div class="brand-card" onclick="location.href='porsche.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/PORSCHE%20LOGO.png?raw=true" alt="Porsche">
+            <p>Porsche</p>
+        </div>
+        <!-- Ferrari -->
+        <div class="brand-card" onclick="location.href='ferrari.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/FERRARI%20LOGO.png?raw=true" alt="Ferrari">
+            <p>Ferrari</p>
+        </div>
+        <!-- Audi -->
+        <div class="brand-card" onclick="location.href='audi.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/AUDI%20LOGO.png?raw=true" alt="Audi">
+            <p>Audi</p>
+        </div>
+        <!-- Bentley -->
+        <div class="brand-card" onclick="location.href='bentley.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/BENTLEY%20LOGO.png?raw=true" alt="Bentley">
+            <p>Bentley</p>
+        </div>
+        <!-- BMW -->
+        <div class="brand-card" onclick="location.href='bmw.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/BMW%20LOGO.png?raw=true" alt="BMW">
+            <p>BMW</p>
+        </div>
+        <!-- Cadillac -->
+        <div class="brand-card" onclick="location.href='cadillac.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/CADILLAC%20LOGO.png?raw=true" alt="Cadillac">
+            <p>Cadillac</p>
+        </div>
+        <!-- Chevrolet -->
+        <div class="brand-card" onclick="location.href='chevrolet.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/CHEVROLET%20LOGO.png?raw=true" alt="Chevrolet">
+            <p>Chevrolet</p>
+        </div>
+        <!-- Ford -->
+        <div class="brand-card" onclick="location.href='ford.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/FORD%20LOGO.png?raw=true" alt="Ford">
+            <p>Ford</p>
+        </div>
+        <!-- Corvette -->
+        <div class="brand-card" onclick="location.href='corvette.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/CORVETTE%20LOGO.png?raw=true" alt="Corvette">
+            <p>Corvette</p>
+        </div>
+        <!-- GMC -->
+        <div class="brand-card" onclick="location.href='gmc.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/GMC%20LOGO.jpg?raw=true" alt="GMC">
+            <p>GMC</p>
+        </div>
+        <!-- Kia -->
+        <div class="brand-card" onclick="location.href='kia.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/KIA%20LOGO.png?raw=true" alt="Kia">
+            <p>Kia</p>
+        </div>
+        <!-- McLaren -->
+        <div class="brand-card" onclick="location.href='mclaren.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/MCLAREN%20LOGO.png?raw=true" alt="McLaren">
+            <p>McLaren</p>
+        </div>
+        <!-- Nissan -->
+        <div class="brand-card" onclick="location.href='nissan.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/NISSAN%20LOGO.png?raw=true" alt="Nissan">
+            <p>Nissan</p>
+        </div>
+        <!-- Ford Mustang -->
+        <div class="brand-card" onclick="location.href='ford mustang.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/MUSTANG%20LOGO.png?raw=true" alt="Ford Mustang">
+            <p>Ford Mustang</p>
+        </div>
+        <!-- Mini Cooper -->
+        <div class="brand-card" onclick="location.href='mini cooper.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/MINI%20COPER%20LOGO.png?raw=true" alt="Mini Cooper">
+            <p>Mini Cooper</p>
+        </div>
+        <!-- Toyota -->
+        <div class="brand-card" onclick="location.href='ford Toyota.html'">
+            <img src="https://github.com/siyad3004/C4-CARS-LUXURY-CAR-RENTAL/blob/main/TOYOTA%20LOGO.png?raw=true" alt="toyota">
+            <p>Toyota</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Velvet Rides Luxury Car Rental. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
 </body>
 </html>

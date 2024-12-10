@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini Models - Velvet Rides</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: black;
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 36px;
+            color: #B5485D;
+            margin: 0;
+        }
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .car-card {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .main-image {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .main-image:hover {
+            transform: scale(2);
+        }
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .thumbnail-container img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .thumbnail-container img:hover {
+            transform: scale(2);
+        }
+        .whatsapp-button {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .whatsapp-button:hover {
+            background-color: #1da759;
+        }
+        .back-button {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .back-button:hover {
+            background-color: #cc7a00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lamborghini Models</h1>
+    </header>
+    <div class="car-grid">
+        <!-- Lamborghini Aventador -->
+        <div class="car-card">
+            <img src="https://example.com/lamborghini-aventador.jpg" class="main-image" id="main-aventador" alt="Lamborghini Aventador">
+            <div class="thumbnail-container">
+                <img src="https://example.com/lamborghini-aventador1.jpg" onclick="changeImage('main-aventador', 'https://example.com/lamborghini-aventador1.jpg')" alt="Thumbnail 1">
+                <img src="https://example.com/lamborghini-aventador2.jpg" onclick="changeImage('main-aventador', 'https://example.com/lamborghini-aventador2.jpg')" alt="Thumbnail 2">
+                <img src="https://example.com/lamborghini-aventador3.jpg" onclick="changeImage('main-aventador', 'https://example.com/lamborghini-aventador3.jpg')" alt="Thumbnail 3">
+                <img src="https://example.com/lamborghini-aventador4.jpg" onclick="changeImage('main-aventador', 'https://example.com/lamborghini-aventador4.jpg')" alt="Thumbnail 4">
+                <img src="https://example.com/lamborghini-aventador5.jpg" onclick="changeImage('main-aventador', 'https://example.com/lamborghini-aventador5.jpg')" alt="Thumbnail 5">
+            </div>
+            <a href="https://wa.me/971123456789?text=I%20am%20interested%20in%20Lamborghini%20Aventador" class="whatsapp-button" target="_blank">Book on WhatsApp</a>
+        </div>
+        <!-- Lamborghini Huracan -->
+        <div class="car-card">
+            <img src="https://example.com/lamborghini-huracan.jpg" class="main-image" id="main-huracan" alt="Lamborghini Huracan">
+            <div class="thumbnail-container">
+                <img src="https://example.com/lamborghini-huracan1.jpg" onclick="changeImage('main-huracan', 'https://example.com/lamborghini-huracan1.jpg')" alt="Thumbnail 1">
+                <img src="https://example.com/lamborghini-huracan2.jpg" onclick="changeImage('main-huracan', 'https://example.com/lamborghini-huracan2.jpg')" alt="Thumbnail 2">
+                <img src="https://example.com/lamborghini-huracan3.jpg" onclick="changeImage('main-huracan', 'https://example.com/lamborghini-huracan3.jpg')" alt="Thumbnail 3">
+                <img src="https://example.com/lamborghini-huracan4.jpg" onclick="changeImage('main-huracan', 'https://example.com/lamborghini-huracan4.jpg')" alt="Thumbnail 4">
+                <img src="https://example.com/lamborghini-huracan5.jpg" onclick="changeImage('main-huracan', 'https://example.com/lamborghini-huracan5.jpg')" alt="Thumbnail 5">
+            </div>
+            <a href="https://wa.me/971123456789?text=I%20am%20interested%20in%20Lamborghini%20Huracan" class="whatsapp-button" target="_blank">Book on WhatsApp</a>
+        </div>
+        <!-- Lamborghini Urus -->
+        <div class="car-card">
+            <img src="https://example.com/lamborghini-urus.jpg" class="main-image" id="main-urus" alt="Lamborghini Urus">
+            <div class="thumbnail-container">
+                <img src="https://example.com/lamborghini-urus1.jpg" onclick="changeImage('main-urus', 'https://example.com/lamborghini-urus1.jpg')" alt="Thumbnail 1">
+                <img src="https://example.com/lamborghini-urus2.jpg" onclick="changeImage('main-urus', 'https://example.com/lamborghini-urus2.jpg')" alt="Thumbnail 2">
+                <img src="https://example.com/lamborghini-urus3.jpg" onclick="changeImage('main-urus', 'https://example.com/lamborghini-urus3.jpg')" alt="Thumbnail 3">
+                <img src="https://example.com/lamborghini-urus4.jpg" onclick="changeImage('main-urus', 'https://example.com/lamborghini-urus4.jpg')" alt="Thumbnail 4">
+                <img src="https://example.com/lamborghini-urus5.jpg" onclick="changeImage('main-urus', 'https://example.com/lamborghini-urus5.jpg')" alt="Thumbnail 5">
+            </div>
+            <a href="https://wa.me/971123456789?text=I%20am%20interested%20in%20Lamborghini%20Urus" class="whatsapp-button" target="_blank">Book on WhatsApp</a>
+        </div>
+        <!-- Lamborghini Veneno -->
+        <div class="car-card">
+            <img src="https://example.com/lamborghini-veneno.jpg" class="main-image" id="main-veneno" alt="Lamborghini Veneno">
+            <div class="thumbnail-container">
+                <img src="https://example.com/lamborghini-veneno1.jpg" onclick="changeImage('main-veneno', 'https://example.com/lamborghini-veneno1.jpg')" alt="Thumbnail 1">
+                <img src="https://example.com/lamborghini-veneno2.jpg" onclick="changeImage('main-veneno', 'https://example.com/lamborghini-veneno2.jpg')" alt="Thumbnail 2">
+                <img src="https://example.com/lamborghini-veneno3.jpg" onclick="changeImage('main-veneno', 'https://example.com/lamborghini-veneno3.jpg')" alt="Thumbnail 3">
+                <img src="https://example.com/lamborghini-veneno4.jpg" onclick="changeImage('main-veneno', 'https://example.com/lamborghini-veneno4.jpg')" alt="Thumbnail 4">
+                <img src="https://example.com/lamborghini-veneno5.jpg" onclick="changeImage('main-veneno', 'https://example.com/lamborghini-veneno5.jpg')" alt="Thumbnail 5">
+            </div>
+            <a href="https://wa.me/971123456789?text=I%20am%20interested%20in%20Lamborghini%20Veneno" class="whatsapp-button" target="_blank">Book on WhatsApp</a>
+        </div>
+        <!-- Lamborghini Gallardo -->
+        <div class="car-card">
+            <img src="https://example.com/lamborghini-gallardo.jpg" class="main-image" id="main-gallardo" alt="Lamborghini Gallardo">
+            <div class="thumbnail-container">
+                <img src="https://example.com/lamborghini-gallardo1.jpg" onclick="changeImage('main-gallardo', 'https://example.com/lamborghini-gallardo1.jpg')" alt="Thumbnail 1">
+                <img src="https://example.com/lamborghini-gallardo2.jpg" onclick="changeImage('main-gallardo', 'https://example.com/lamborghini-gallardo2.jpg')" alt="Thumbnail 2">
+                <img src="https://example.com/lamborghini-gallardo3.jpg" onclick="changeImage('main-gallardo', 'https://example.com/lamborghini-gallardo3.jpg')" alt="Thumbnail 3">
+                <img src="https://example.com/lamborghini-gallardo4.jpg" onclick="changeImage('main-gallardo', 'https://example.com/lamborghini-gallardo4.jpg')" alt="Thumbnail 4">
+                <img src="https://example.com/lamborghini-gallardo5.jpg" onclick="changeImage('main-gallardo', 'https://example.com/lamborghini-gallardo5.jpg')" alt="Thumbnail 5">
+            </div>
+            <a href="https://wa.me/971123456789?text=I%20am%20interested%20in%20Lamborghini%20Gallardo" class="whatsapp-button" target="_blank">Book on WhatsApp</a>
+        </div>
+        <!-- Lamborghini Reventon -->
+        <div class="car-card">
+            <img src="https://example.com/lamborghini-reventon.jpg" class="main-image" id="main-reventon" alt="Lamborghini Reventon">
+            <div class="thumbnail-container">
+                <img src="https://example.com/lamborghini-reventon1.jpg" onclick="changeImage('main-reventon', 'https://example.com/lamborghini-reventon1.jpg')" alt="Thumbnail 1">
+                <img src="https://example.com/lamborghini-reventon2.jpg" onclick="changeImage('main-reventon', 'https://example.com/lamborghini-reventon2.jpg')" alt="Thumbnail 2">
+                <img src="https://example.com/lamborghini-reventon3.jpg" onclick="changeImage('main-reventon', 'https://example.com/lamborghini-reventon3.jpg')" alt="Thumbnail 3">
+                <img src="https://example.com/lamborghini-reventon4.jpg" onclick="changeImage('main-reventon', 'https://example.com/lamborghini-reventon4.jpg')" alt="Thumbnail 4">
+                <img src="https://example.com/lamborghini-reventon5.jpg" onclick="changeImage('main-reventon', 'https://example.com/lamborghini-reventon5.jpg')" alt="Thumbnail 5">
+            </div>
+            <a href="https://wa.me/971123456789?text=I%20am%20interested%20in%20Lamborghini%20Reventon" class="whatsapp-button" target="_blank">Book on WhatsApp</a>
+        </div>
+    </div>
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <script>
+        function changeImage(mainId, newSrc) {
+            document.getElementById(mainId).src = newSrc;
+        }
+    </script>
+</body>
+</html>
